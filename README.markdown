@@ -21,9 +21,6 @@ Sample Usage
       for line in input_file:
         model.add(line)
     
-    # tokenize each line, and compute frequencies.
-    model.tokenize().normalize()
-    
     # generate text, ensuring that the generated text is not a stem or leaf of one of the input lines.
     for phrase in model.generate(num=10, new_only=True):
       print phrase
