@@ -139,7 +139,7 @@ class MarkovModel(object):
               thisWord = model_word
               break
       sentence = [thisWord]
-      while thisWord != u'':
+      while ' '.join(sentence) == '' or thisWord != u'':
         if thisWord not in self._freqs:
           break;
         randNum = random.random()
